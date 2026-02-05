@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        button {
+            background-color: rgb(169, 160, 65);
+            color: white;
+        }
+        #btnnao {
+            /* aqui eu coloco a posicao */
+            position: relative;
+            /*
+            top: 20px;
+            left: 30px;
+            */
+        }
+        #centralizar {
+            text-align: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="centralizar">
+        <p> Quer namorar comigo? </p>
+        <div> <button> sim </button>
+        <button id="btnnao" onmouseover="movimentar_botao()"> não </button> </div>
+        
+    </div>
+    
+    <script> 
+        function movimentar_botao () {
+            /* caso queira colocar um texto ao clicar nao
+            alert ("test")
+            */
+            btnnao.style.left= Math.random()*300+"px"
+            btnnao.style.top= Math.random()*300+"px"
+        }
+    </script>
+
+</body>
+</html>

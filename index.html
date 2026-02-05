@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Minhas fotas
+    </title>
+</head>
+<style>
+    button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 20px;
+        font-size: 16x;
+        cursor: pointer;
+        margin: 8px;
+    }
+
+    button:hover {
+        background-color: darkblue
+    }
+
+    .galeria {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .galeria img {
+        width: 200px;
+        height: auto;
+        border-radius: 10px;
+        margin: 5px;
+
+    }
+</style>
+</head>
+
+<body>
+    <h2> Nuvem </h2>
+
+    <button onclick="senha()">ADIVINHE A SENHA </button>
+    <button onclick="mostrar_maior_18()">CONDIÇÃO DE ACESSO</button>
+
+    <!-- Botões que aparecem após acertar a senha -->
+
+    <div id="opcoes" style="display:none" <h3> Escolha um país</h3>
+        <button onclick="mostrarPeru()"> 🇵🇪 Peru </button>
+        <button onclick="mostrarPortugal()"> 🇵🇹 Portugal </button>
+        <button onclick="mostrarEspanha()"> 🇪🇸 Espanha </button>
+    </div>
+
+    <!-- Galeria Peru -->
+    <div id="peru" class="galeria">
+        <img src="peru imagens/peru1.jpg" </div>
+</body>
+
+</html>
+
+<body>
+    Nuvem
+    <button onclick="senha()">
+        ADIVINHE A SENHA
+    </button>
+    <button onclick="mostrar_maior_18()">
+        CONDIÇÃO DE ACESSO
+    </button>
+    <script>
+        function mostrar_maior_18() {
+            let idade = prompt("qual é a sua idade?")
+            if (idade >= 18) {
+                alert("seja bem-viado!")
+
+            } else {
+                alert("sai daqui viado")
+            }
+        }
+
+
+        function senha() {
+            alert("oi estranho")
+            let senha = prompt("qual é a senha de acesso?")
+            if (senha == "quelzinha") {
+                alert("acertouu manin! seja bem viado")
+                document.getElementById("opcoes").style.display = "block";
+
+            } else {
+                alert("errouuu maninho")
+
+            }
+        }
+        function mostrarPeru() {
+            document.getElementById("peru").style.display = "block";
+        }
+
+
+    </script>
+</body>
+
+</html>

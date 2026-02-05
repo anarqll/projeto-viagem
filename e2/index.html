@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Position - Demo Visual</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+            /* para permitir scroll */
+        }
+
+        h2 {
+            margin: 40px 20px 10px;
+        }
+
+        .section {
+            margin: 20px;
+            border: 2px dashed #ccc;
+            position: relative;
+            height: 200px;
+        }
+
+        .box {
+            width: 120px;
+            height: 60px;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* STATIC */
+
+        .static {
+            position: static;
+            opacity: 0.5;
+            background: steelblue;
+        }
+
+        /* RELATIVE */
+
+        .relative {
+            position: relative;
+            height: 400px;
+            top: 20px;
+            left: 30px;
+            background: seagreen;
+        }
+        .estrela {
+            position: absolute;
+            font-size: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+/*            transform: translateY(-50%); */
+            right: 0px;
+
+        }
+
+        /* ABSOLUTE */
+        .absolute {
+            position: absolute;
+            opacity: 0.5;
+            bottom: 0px;
+            background: tomato;
+        }
+
+        /*FIXED */
+
+        .fixed {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: goldenrod;
+        }
+
+        /* STICKY */
+        .sticky {
+            position: sticky;
+            top: 0;
+            background: purple;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perferendis, quis repellat consequatur
+        illo adipisci et explicabo error commodi at ipsum dolor laudantium facilis natus cupiditate sit eum dolorum
+        veniam?</p>
+    <p> texto </p>
+    <p> texto</p>
+    <div class="box sticky">STICKY</div>
+
+    <h2>1 position: static</h2>
+    <div class="section">
+        uyguguybubuhbuyb
+        <div class="box static">
+            <div class="absolute"> absolute </div>STATIC </div>
+        ugyguyguyguyb
+    </div>
+
+    <h2> 2 position: relative </h2>
+    <div class="section">
+        <div class="box relative">
+            <div class="estrela" > 🌟 </div>RELATIVE
+        </div>
+    </div>
+
+    <h2> 3 position: absolute </h2>
+    <div class="section">
+        eu e vccc suado na naveee
+        <div class="box absolute">ABSOLUTE</div>
+        ubuhuihiuhiuhiuhiu
+    </div>
+
+    <h2> 4 position: fixed </h2>
+    <p style="margin:20px"> Role a página </p>
+    <div class="box fixed"> FIXED </div>
+
+</body>
+
+</html>
